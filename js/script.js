@@ -3,5 +3,7 @@ const list = [
 ]
 
 function getQuote(paragraphs = 1, tag = 'balablu') {
-
+    return [
+        list[0].quote
+    ]
 }
