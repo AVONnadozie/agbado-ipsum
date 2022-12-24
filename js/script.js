@@ -1,6 +1,7 @@
 const list = [
-    {weight:0,tags:[],quote:""}
+    {weight: 2, tags: [], quote: "A town hall, different, from blala blu, blu blu, bulaba."}
 ]
-function getQuote(paragraphs = 1) {
+
+function getQuote(paragraphs = 1, tag = 'balablu') {
 
 }
