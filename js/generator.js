@@ -1,6 +1,6 @@
 const TAGS = {
     RANDOM: 'Random Quotes',
-    BULABA: 'Bulaba',
+    BALABLU: 'Balablu',
     DOWN_PAYMENT: 'Down payment for a roasted corn',
     AGBADO: 'Agabado',
     EL_RUFIA: 'Nasiru El Rufia',
@@ -17,7 +17,7 @@ const TAGS = {
 }
 
 const QUOTES = [
-    {tags: [TAGS.BULABA], quote: "A town hall, different, from blala blu, blu blu, bulaba"},
+    {tags: [TAGS.BALABLU], quote: "A town hall, different, from blala blu, blu blu, bulaba"},
     {
         tags: [TAGS.EL_RUFIA],
         quote: "I'm openly begging Nasiru El Rufia not to run away for additional degree ehhh, excuse, [laughs] to now is  going to cairo PhD and everything, there are lots of educated relics, we are not going to let you run away, your vision, creativity, and resilience in turning a rotten situation to a bad one is necessary at this critical time, ahh. That is why we're here today"
