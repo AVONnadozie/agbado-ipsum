@@ -1,5 +1,5 @@
 const TAGS = {
-    RANDOM: 'Random Quotes',
+    BOLE: 'Bole',
     BALABLU: 'Balablu',
     DOWN_PAYMENT: 'Down payment for a roasted corn',
     AGBADO: 'Agabado',
@@ -17,6 +17,7 @@ const TAGS = {
 }
 
 const QUOTES = [
+    {tags: [TAGS.BOLE], quote: "Building charge stations, we're yet to generate electricity to even roast bole"},
     {tags: [TAGS.BALABLU], quote: "A town hall, different, from blala blu, blu blu, bulaba"},
     {
         tags: [TAGS.EL_RUFIA],
@@ -59,17 +60,25 @@ const QUOTES = [
         tags: [TAGS.DOWN_PAYMENT, TAGS.AGBADO],
         quote: "We have no blinker of electricity. They spent more than 16 billion dollars, they forget that transmission line is a super highway for generated electricity [and] power, they could not even make a down payment for a roasted corn, for that electricity"
     },
-    {tags: [TAGS.ZZZ], quote: "ZZzzzZ"},
+    {tags: [TAGS.ZZZ], quote: "ZZzzzzzzzZ ZzzzZ ZzzzZZ"},
 ];
 
 class Generator {
-    makeParagraph(tag = TAGS.RANDOM, minParagraphLength = 0) {
+    makeParagraph(tags = [], minParagraphLength = 0) {
         let paragraph = '';
         do {
             let match = [];
-            if (tag && tag !== TAGS.RANDOM) {
+            if (tags && tags.length) {
                 match = QUOTES.filter((line) => {
-                    return line.tags.includes(tag)
+                    let t = false;
+                    tags.every((tag) => {
+                        if (line.tags.includes(tag)) {
+                            t = true;
+                            return false
+                        }
+                        return true
+                    })
+                    return t;
                 });
             } else {
                 match = QUOTES;
@@ -84,10 +93,10 @@ class Generator {
         return paragraph.trim();
     }
 
-    getQuote(tag, paragraphs = 1, minParagraphLength = 0) {
+    getQuote(tags = [], paragraphs = 1, minParagraphLength = 0) {
         const lines = [];
         for (let i = 0; i < paragraphs; i++) {
-            const p = this.makeParagraph(tag, minParagraphLength);
+            const p = this.makeParagraph(tags, minParagraphLength);
             if (!p.length) break;
 
             lines.push(p)
