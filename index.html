@@ -17,27 +17,136 @@
     <!-- Scripts-->
     <script src="js/generator.js"></script>
     <script src="js/app.js" defer></script>
+    
+    <!--UNICONS-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
+    <!--CSS-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<section class="sidebar">
-    <h1>Balablu Ipsum</h1>
-    <h2>What is Balablu Ipsum</h2>
-    <p>
-        It is simply placeholder text of the design and development community. It can be used to generate dummy text for
-        graphic, print, publishing, etc.
+<!--    <section class="list">-->
+<!--        <h2>List</h2>-->
+<!--        <div></div>-->
+<!--    </section>-->
+<!--    <section class="content">-->
+<!--        <h2>Generated Text</h2>-->
+<!--        <div></div>-->
+<!--    </section>-->
 
-        Try it out, generate some text for your project!
-    </p>
-</section>
-<section class="list">
-    <h2>List</h2>
-    <div></div>
-</section>
-<section class="content">
-    <h2>Generated Text</h2>
-    <div></div>
-</section>
+    <img src="/assets/img/cubes.png" alt="" class="cubes">
 
+    <div class="main container">
+        <div class="header">
+            <h3 class="title header-title">BALABLU IPSUM</h3>
+        </div>
+
+        <div class="intro">
+            <h1 class="title intro-title">What is Balablu Ipsum?</h1>
+            <p class="intro-text">
+                It is simply placeholder text of the design and development community. It can be used to generate
+                dummy text for graphic, print, publishing, etc.
+                <br><br>
+                Try it out, generate some text for your project!
+            </p>
+        </div>
+
+        <div class="ipsum-gen">
+            <img src="/assets/img/tinqt.png" alt="" class="bat">
+            <h3 class="title ipsum-gen-title">Generated Text</h3>
+
+            <div class="ipsum-card">
+                <div class="card-header">
+                    <div class="gen-options">
+                        <div class="gen-options-left">
+                            <div class="paragraph-num">
+                                <input type="number" class="custom-input para-num" min="1" value="2"
+                                       oninput="this.value =
+                                       !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null"
+                                > Paragraphs
+                            </div>
+                            <div class="options-divider"></div>
+                            <div class="other-phrase custom-input">
+                            <div class="other-drop" id="other_drop">
+                                <p class="other-label">Other Phrases</p> <i class="uil uil-angle-down"></i>
+                            </div>
+
+                            <div class="other-options" id="other_option" style="display: none">
+                                <div class="option-single">
+                                    <input id="agbado" type="checkbox" class="custom-check"> <label for="agbado">Agbado</label>
+                                    <span class="checkmark"></span>
+                                </div>
+                                <div class="option-single">
+                                    <input id="down" type="checkbox" class="custom-check"> <label for="down">Down Payment</label>
+                                </div>
+                                <div class="option-single">
+                                    <input id="pdapc" type="checkbox" class="custom-check"> <label for="pdapc">PDAPC!</label>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="generate">
+                            <button class="btn-custom">Generate</button>
+                        </div>
+                    </div>
+
+                    <div class="copy-text">
+                        <button class="btn-custom btn-copy"><i class="uil uil-copy-alt"></i> Copy Text</button>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <p class="gen-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porta lorem mollis aliquam ut
+                        porttitor leo a. Convallis convallis tellus id interdum velit laoreet id donec ultrices. Maecenas ultricies mi eget mauris pharetra et. Quis imperdiet massa
+                        tincidunt nunc. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. Morbi tincidunt augue interdum velit euismod in pellentesque massa.
+                        Sed sed risus pretium quam. In iaculis nunc sed augue. Etiam erat velit scelerisque in dictum non consectetur a. Purus gravida quis blandit turpis cursus in
+                        hac habitasse. Lorem ipsum dolor sit amet.
+                        <br><br>
+                        Quam lacus suspendisse faucibus interdum. Tortor posuere ac ut consequat. Sagittis eu volutpat odio facilisis mauris. Ac turpis egestas maecenas pharetra
+                        convallis. Velit egestas dui id ornare arcu odio ut sem. Laoreet non curabitur gravida arcu ac tortor dignissim. Vivamus arcu felis bibendum ut tristique et.
+                        Pharetra convallis posuere morbi leo urna molestie at. Non enim praesent elementum facilisis. Neque volutpat ac tincidunt vitae semper quis lectus nulla at.
+                        Vitae suscipit tellus mauris a diam maecenas sed. Faucibus scelerisque eleifend donec pretium vulputate sapien nec.
+                        <br><br>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-content">
+                <div class="terms-link">
+                    <p>Terms of Use</p>
+                </div>
+
+                <div class="copyright">
+                    Copyright &copy; 2022 &nbsp; <span class="balablu">Balablu Ipsum</span>
+                </div>
+
+                <div class="social">
+                    <p>Share:</p>
+                    <i class="uil uil-facebook-f"></i>
+                    <i class="uil uil-instagram"></i>
+                    <i class="uil uil-twitter-alt"></i>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
+<script>
+    document.getElementById("other_drop").addEventListener("click", displayOptions);
+
+    function displayOptions() {
+        let list = document.getElementById("other_option");
+        if (list.style.display === "none") {
+            list.style.display = "flex";
+        } else {
+            list.style.display = "none";
+        }
+    }
+</script>
 </html>
