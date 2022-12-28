@@ -1,26 +1,47 @@
 const generator = new Generator();
+let copyText = '';
 
 function getTags() {
     const tags = generator.getTags()
-    let html = `<div class="option-single">` +
-        `<input id="random" type="checkbox" name="random" class="custom-check"> <label for="random">Random Quotes</label>` +
-        `<span class="checkmark"></span></div>`
+    let html = ''
     tags.forEach((t) => {
         html += `<div class="option-single">` +
-            `<input id="${t.key}" name="${t.key}" type="checkbox" class="custom-check"> <label for="${t.key}">${t.name}</label>` +
+            `<input id="${t.key}" name="tags" value="${t.name}" type="checkbox" class="custom-check"> <label for="${t.key}">${t.name}</label>` +
             `<span class="checkmark"></span></div>`
     })
 
     document.getElementById("other_option").innerHTML = html;
 }
 
-function generateText(tags = [], paragraphs = 1, minParagraphLength = 0) {
-    document.querySelector('.card-body > .gen-text').innerHTML = generator.getQuote(tags, paragraphs, minParagraphLength).join('<br>')
+function copyGeneratedText() {
+    const btnText = document.querySelector('button.btn-copy span');
+    navigator.clipboard.writeText(copyText).then(() => {
+        btnText.innerText = 'Copied!';
+        setTimeout(() => {
+            btnText.innerText = 'Copy Text';
+        }, 2000)
+    });
+}
+
+function generateText() {
+    const tags = [...document.querySelectorAll('.custom-check:checked')].map((el) => el.value)
+    const paragraphs = document.getElementById('paragraphs').value
+    const minParagraphLength = document.getElementById('p-length').value
+
+    const quotes = generator.getQuote(tags, paragraphs, minParagraphLength);
+    document.querySelector('.card-body > .gen-text').innerHTML = quotes.map(p => `<p>${p}</p>`).join('');
+    copyText = quotes.join("\n\n");
+
+    // Add copy event
+    const btn = document.querySelector('button.btn-copy');
+    btn.addEventListener('click', copyGeneratedText)
 }
 
 function setHeader() {
-    console.log(generator.getQuote([TAGS.BOLE, TAGS.BALABLU]).join(' '))
-    document.querySelector('.header > .title > span').innerText = generator.getQuote([TAGS.BOLE, TAGS.BALABLU]).join(' ')
+    const highlight = [
+        TAGS.BALABLU
+    ]
+    document.querySelector('.header > .title > span').innerText = generator.getQuote(highlight).join(' ')
 }
 
 function init() {
@@ -32,6 +53,9 @@ function init() {
             list.style.display = "none";
         }
     });
+
+    const btn = document.querySelector('button.btn-generate');
+    btn.addEventListener('click', generateText)
 
     setHeader();
     getTags()

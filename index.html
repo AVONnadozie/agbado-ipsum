@@ -45,38 +45,40 @@
                     <div class="gen-options">
                         <div class="gen-options-left">
                             <div class="paragraph-num">
-                                <input type="number" class="custom-input para-num" min="1" value="1"
+                                <input type="number" id="paragraphs" class="custom-input para-num" min="1" value="3"
                                        oninput="this.value =
                                        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null"
                                 > Paragraphs
                             </div>
                             <div class="options-divider"></div>
+                            <div class="paragraph-num">
+                                <input type="number" id="p-length" class="custom-input para-num" min="1" value="50"
+                                       oninput="this.value =
+                                       !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null"
+                                > Paragraph Length
+                            </div>
+                            <div class="options-divider"></div>
                             <div class="other-phrase custom-input">
                             <div class="other-drop" id="other_drop">
-                                <p class="other-label">Other Phrases</p> <i class="uil uil-angle-down"></i>
+                                <p class="other-label">Select Quote</p> <i class="uil uil-angle-down"></i>
                             </div>
 
-                            <div class="other-options" id="other_option" style="display: none">
-                                <div class="option-single">
-                                    <input id="agbado" type="checkbox" class="custom-check"> <label for="agbado">Agbado</label>
-                                    <span class="checkmark"></span>
-                                </div>
-                            </div>
+                            <div class="other-options" id="other_option" style="display: none"></div>
                         </div>
                         </div>
 
                         <div class="generate">
-                            <button class="btn-custom">Generate</button>
+                            <button class="btn-custom btn-generate">Generate</button>
                         </div>
                     </div>
 
                     <div class="copy-text">
-                        <button class="btn-custom btn-copy"><i class="uil uil-copy-alt"></i> Copy Text</button>
+                        <button class="btn-custom btn-copy"><i class="uil uil-copy-alt"></i> <span>Copy Text</span></button>
                     </div>
                 </div>
 
                 <div class="card-body">
-                    <p class="gen-text"></p>
+                    <div class="gen-text"></div>
                 </div>
             </div>
         </div>

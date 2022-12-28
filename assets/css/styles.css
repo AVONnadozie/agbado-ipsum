@@ -52,9 +52,8 @@ html {
 
 body {
     font-family: "Stag Sans", sans-serif;
-    background: url("/assets/img/txbg.png");
     background-size: cover;
-    background-repeat: no-repeat;
+    background: url("../img/txbg.png") no-repeat;
 }
 
 ul {
@@ -416,8 +415,12 @@ button.btn-copy:hover {
 
 }
 
-p.gen-text {
+div.gen-text {
     font-weight: 300;
+}
+
+.gen-text p {
+    margin-bottom: 20px;
 }
 
 .footer {
@@ -550,57 +553,6 @@ img.bat {
         display: none;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

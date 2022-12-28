@@ -1,14 +1,14 @@
 const TAGS = {
-    BOLE: 'Bole',
+    BOLE: 'Electricity for Bole',
     BALABLU: 'Balablu',
     DOWN_PAYMENT: 'Down payment for a roasted corn',
     AGBADO: 'Agabado',
     EL_RUFIA: 'Nasiru El Rufia',
-    BUHARI: 'Buhari!',
+    BUHARI: 'Buhari',
     AAPC: 'Action, APC',
     FOCUS: 'Focused',
     PDAPC: 'PD,APC',
-    DEAD_FISH: 'A dead fish cannot be sweet in any soup',
+    DEAD_FISH: 'Dead fish',
     MIND: 'Human mind, can change',
     RUNNING_MATES: 'Why are you running?',
     APV: 'PVC, APV, APC?',
@@ -60,33 +60,33 @@ const QUOTES = [
         tags: [TAGS.DOWN_PAYMENT, TAGS.AGBADO],
         quote: "We have no blinker of electricity. They spent more than 16 billion dollars, they forget that transmission line is a super highway for generated electricity [and] power, they could not even make a down payment for a roasted corn, for that electricity"
     },
-    {tags: [TAGS.ZZZ], quote: "ZZzzzzzzzZ ZzzzZ ZzzzZZ"},
+    {tags: [TAGS.ZZZ], quote: "ZZzzzzzzzZ"},
 ];
 
 class Generator {
     makeParagraph(tags = [], minParagraphLength = 0) {
+        let match = [];
+        if (tags && tags.length) {
+            match = QUOTES.filter((line) => {
+                let t = false;
+                tags.every((tag) => {
+                    if (line.tags.includes(tag)) {
+                        t = true;
+                        return false
+                    }
+                    return true
+                })
+                return t;
+            });
+        } else {
+            match = QUOTES;
+        }
+
+        if (!match.length)
+            return;
+
         let paragraph = '';
         do {
-            let match = [];
-            if (tags && tags.length) {
-                match = QUOTES.filter((line) => {
-                    let t = false;
-                    tags.every((tag) => {
-                        if (line.tags.includes(tag)) {
-                            t = true;
-                            return false
-                        }
-                        return true
-                    })
-                    return t;
-                });
-            } else {
-                match = QUOTES;
-            }
-
-            if (!match.length)
-                break;
-
             paragraph += match[Math.floor(Math.random() * match.length)].quote + '. '
         } while (paragraph.length < minParagraphLength)
 
