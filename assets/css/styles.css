@@ -313,6 +313,7 @@ input.para-num {
     display: flex;
     align-items: center;
     font-weight: 300;
+    cursor: pointer;
 }
 @media screen and (max-width: 540px) {
     .other-drop {
@@ -344,6 +345,7 @@ p.other-label {
     padding: 8px;
     display: flex;
     flex-direction: column;
+    width: max-content;
 }
 
 .option-single {
