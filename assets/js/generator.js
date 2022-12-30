@@ -60,7 +60,7 @@ const QUOTES = [
         tags: [TAGS.DOWN_PAYMENT, TAGS.AGBADO],
         quote: "We have no blinker of electricity. They spent more than 16 billion dollars, they forget that transmission line is a super highway for generated electricity [and] power, they could not even make a down payment for a roasted corn, for that electricity"
     },
-    {tags: [TAGS.ZZZ], quote: "ZZzzzzzzzZ"},
+    {tags: [TAGS.ZZZ], quote: "[Sleeps] ZZzzzzzzzZ zzzzzZZzzz ZzzzzzZZ zzzzzzzzzZ"},
 ];
 
 class Generator {
