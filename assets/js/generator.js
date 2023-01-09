@@ -11,7 +11,7 @@ const TAGS = {
     DEAD_FISH: 'Dead fish',
     MIND: 'Human mind, can change',
     RUNNING_MATES: 'Why are you running?',
-    APV: 'PVC, APV, APC?',
+    PVC: 'PVC, APV, APC?',
     CHAD: 'I will recharge Lake Chad',
     ZZZ: 'Night Night',
 }
@@ -37,7 +37,11 @@ const QUOTES = [
     },
     {
         tags: [TAGS.AGBADO],
-        quote: "We're competing with arm robbers and bandits to recruit from the youths who are unemployed, 33% unemployed, recruit 50 million youths into the army and ehhh, what they will eat? Cassava, agbado, ehhh, corn, and in the morning, yam"
+        quote: "We're competing with arm robbers and bandits to recruit from the youths who are unemployed, 33% unemployed. [long pause] Recruit 50 million youths into the army and ehhh, what they will eat? Cassava, ehhh, agbado, ehhhh, corn, and in the morning, yam, in the afternoon; It's growing here. You create demand and consumption."
+    },
+    {
+        tags: [TAGS.PVC],
+        quote: "They may not announce to you on time, the PVC you have has expired. Yes"
     },
     {
         tags: [TAGS.RUNNING_MATES],
@@ -49,8 +53,8 @@ const QUOTES = [
             "Wrong arithmetic, wrong statistics, where else economy, that's not what Nigeria needs"
     },
     {
-        tags: [TAGS.APV],
-        quote: "Are you great? God bless you, God bless you, go and [take] your PVC and you vote APC, do you love me? Do you love me? Do you love me? Go and take you APV, APC and you must vote, you must vote that morning"
+        tags: [TAGS.PVC],
+        quote: "Are you great? God bless you, God bless you, go and [take] your PVC and you vote APC, do you love me? Do you love me? Do you love me? Go and take you PVC, APC and you must vote, you must vote that morning"
     },
     {
         tags: [TAGS.CHAD],
