@@ -22,8 +22,9 @@
     <link rel="icon" href='assets/favicon.ico' type="image/x-icon"/>
     <link rel='shortcut icon' type='image/x-icon' href='assets/favicon.ico'/>
     <!-- Scripts-->
-    <script src="assets/js/generator.js"></script>
-    <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/quotes.js?v=0.0.1"></script>
+    <script src="assets/js/generator.js?v=0.0.1"></script>
+    <script src="assets/js/app.js?v=0.0.1" defer></script>
     
     <!--UNICONS-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -50,7 +51,7 @@
 
         <div class="ipsum-gen">
             <img src="./assets/img/tinqt.png" alt="" class="bat">
-            <h3 class="title ipsum-gen-title">Generate More Text</h3>
+            <h3 class="title ipsum-gen-title">Generate More</h3>
 
             <div class="ipsum-card">
                 <div class="card-header">
@@ -64,7 +65,7 @@
                             </div>
                             <div class="options-divider"></div>
                             <div class="paragraph-num">
-                                <input type="number" id="p-length" class="custom-input para-num" min="1" value="50"
+                                <input type="number" id="p-length" class="custom-input para-num" min="1" value="100"
                                        oninput="this.value =
                                        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null"
                                 > Paragraph Length
