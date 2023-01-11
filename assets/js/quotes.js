@@ -1,7 +1,9 @@
 const TAGS = {
     ELECTRICITY: 'Electricity',
     BALABLU: 'Balablu',
+    DAGRIN: 'Dagrin daza daadahoga',
     AGBADO: 'Agabado',
+    REFORMS: 'Reforms',
     EL_RUFIA: 'Nasiru El Rufia',
     BUHARI: 'Buhari',
     FOCUS: 'Focused',
@@ -15,7 +17,18 @@ const TAGS = {
 
 const QUOTES = [
     {tags: [TAGS.ELECTRICITY], quote: "Building charge stations, we're yet to generate electricity to even roast bole"},
-    {tags: [TAGS.ELECTRICITY], quote: "They spent 16 million dooollaaars, and they no fit generate electricity for popcorn"},
+    {
+        tags: [TAGS.ELECTRICITY],
+        quote: "They spent 16 million dooollaaars, and they no fit generate electricity for popcorn"
+    },
+    {
+        tags: [TAGS.ELECTRICITY, TAGS.DAGRIN],
+        quote: "We will turn this state to energy state, turn the so called yahoo boys to expert in manufacturing and creation of chips that dagrin daza daadahoga"
+    },
+    {
+        tags: [TAGS.REFORMS],
+        quote: "God has answered your prayers, we call all obeys, reforms, being shutdown reform, meet damn reform"
+    },
     {tags: [TAGS.BALABLU], quote: "A town hall, different, from blala blu, blu blu, bulaba"},
     {
         tags: [TAGS.EL_RUFIA],
@@ -59,9 +72,9 @@ const QUOTES = [
         quote: "It's time we discuss the lack of food and the challenges of terrorism, we will talk about lake chad; ok, let me assure you, if I'm elected the president, I will recharge Lake Chad"
     },
     {
-        tags: [ TAGS.AGBADO, TAGS.ELECTRICITY],
+        tags: [TAGS.AGBADO, TAGS.ELECTRICITY],
         quote: "We have no blinker of electricity. They spent more than 16 billion dollars, they forget that transmission line is a super highway for generated electricity [and] power, they could not even make a down payment for a roasted corn, for that electricity"
     },
-    {tags: [TAGS.ZZZ], quote: "[Sleeps] ZZzzzzzzzZ zzzzzZZzzz ZzzzzzZZ zzzzzzzzzZ"},
+    {tags: [TAGS.ZZZ], quote: "[Sleeps] ZZzzzzzzzZ"},
 ];
 
